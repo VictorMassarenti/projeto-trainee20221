@@ -1,0 +1,33 @@
+.caixa_login {
+    width: 400px;
+    height: 420px;
+    border-radius: 30px;
+    background-color: #E3DDD7;
+    margin:30px;
+    margin-bottom: 150px;
+    margin-top: 150px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right:30px;
+    padding-left: 30px;
+  
+  }
+
+.input_login {
+    height: 40px;
+  }
+  
+  .border-black {
+    border: 1px solid black;
+  }
+  
+  
+  .background_login {
+    background-image: url(./assets/bg-login/image_processing20210402-28781-1dqv37c.png);
+  }
+  
+  .red-ball {
+    width: 24px;
+    border-radius: 50%;
+    background-color: #C52A32;
+  }

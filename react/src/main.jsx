@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client'
 import Navbar from './Navbar'
 import Home from './Home'
 import Footer from './Footer'
-import './Main.css'
+import Login from './Login'
+import Aboutus from './Aboutus'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Navbar />
-    <Home />
+    <Aboutus />
+    {/* <Home /> */}
+    {/* <Login /> */}
     <Footer />
+    
   </React.StrictMode>
 )

@@ -1,5 +1,6 @@
 import React from "react";
 import logo from './assets/nav-logo/logo.png'
+import './Main.css'
 
 function Navbar() {
     const imgStyle = {
