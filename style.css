@@ -1,0 +1,39 @@
+body {
+  min-width: 372px;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.bg-vermelho {
+  background-color: #C52A32;
+}
+
+.bg-cinza {
+  background-color: #353535;
+}
+
+.bg-bege {
+  background-color: #E3DDD7;
+}
+
+.bg-branco {
+  background-color: #FFFF;
+}
+
+.text-cinza {
+  color: #353535;
+}
+
+p.truncar-3l {
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner {
+  border-radius: 10px;
+}
