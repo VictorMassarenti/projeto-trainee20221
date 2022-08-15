@@ -7,6 +7,10 @@ function Navbar() {
     };
     const fontSize = {
         fontSize: '24px'
+    };
+    const fontSizeB = {
+        fontSize: '24px',
+        padding: '6px'
     }
 
     return (
@@ -25,19 +29,19 @@ function Navbar() {
 
                         <div className="col-12 col-md-2 text-center text-md-end pt-4">
                             <a href="dark.html" className="text-decoration-none text-dark">
-                                <span className="material-icons text-cinza" style={fontSize}>
+                                <span className="material-icons text-cinza" style={fontSizeB}>
                                     person
                                 </span>
                             </a>
 
                             <a href="dark.html" className="text-decoration-none text-dark">
-                                <span className="material-icons text-cinza" style={fontSize}>
+                                <span className="material-icons text-cinza" style={fontSizeB}>
                                     shopping_cart
                                 </span>
                             </a>
 
                             <a href="/carrinho.html" className="text-black">
-                                <span className="material-icons md-24 text-cinza text-md-center" style={fontSize}>
+                                <span className="material-icons text-cinza text-md-center" style={fontSizeB}>
                                     dark_mode
                                 </span>
                             </a>
