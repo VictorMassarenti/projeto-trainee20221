@@ -1,18 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Navbar from './Navbar'
-import Home from './Home'
-import Footer from './Footer'
-import Login from './Login'
-import Aboutus from './Aboutus'
+
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navbar />
-    <Aboutus />
-    {/* <Home /> */}
-    {/* <Login /> */}
-    <Footer />
+    <App />
     
   </React.StrictMode>
 )

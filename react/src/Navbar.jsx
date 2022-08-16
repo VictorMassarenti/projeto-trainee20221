@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import logo from './assets/nav-logo/logo.png'
 import './Main.css'
 
@@ -15,8 +17,8 @@ function Navbar() {
     }
 
     return (
-        <div>
-            <div className="bg-bege border-bottom shadow">
+        <header>
+            <nav className="bg-bege border-bottom shadow">
                 <div className="container">
                     <div className="row py-3">
                         <div className="col-12 col-md-2 text-center text-md-start mb-3 mb-md-0">
@@ -49,8 +51,8 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </nav>
+        </header>
     )
 }
 
