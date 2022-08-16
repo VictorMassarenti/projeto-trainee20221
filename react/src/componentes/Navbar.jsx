@@ -26,7 +26,7 @@ function Navbar() {
                         </div>
                         <div className="col-12 col-md-8 text-center text-md-center text-md-start mb-3 mb-md-0 pt-3 text-cinza" style={fontSize}>
                             <Link to="/" className="text-decoration-none text-dark px-2"><b>Home</b></Link>
-                            <Link to="/" className="text-decoration-none text-dark px-2"><b>Collection</b></Link>
+                            <Link to="/collection" className="text-decoration-none text-dark px-2"><b>Collection</b></Link>
                             <Link to="/aboutus" className="text-decoration-none text-dark px-2"><b>About Us</b></Link>
                         </div>
 

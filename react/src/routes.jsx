@@ -6,6 +6,7 @@ import Navbar from "./componentes/Navbar"
 import Footer from "./componentes/Footer"
 import Cadastro from "./componentes/Cadastro"
 import Login from "./componentes/Login"
+import Collection from "./Collection"
 
 
 export default function AppRouter () {
@@ -14,6 +15,7 @@ export default function AppRouter () {
             <Navbar />
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/collection' element={<Collection />} />
                 <Route path='/aboutus' element={<Aboutus />} />
                 <Route path='/logincadastro' element={<Cadastro />} />
                 <Route path='/login' element={<Login />} />

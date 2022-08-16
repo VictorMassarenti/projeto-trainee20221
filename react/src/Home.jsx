@@ -64,12 +64,12 @@ function Home() {
                             </form>
                             <nav className="d-inline-block me-3 mr-3">
                                 <ul className="pagination pagination-sm my-0">
-                                    <li className="page-item"><a className="page-link" href="#">1</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                    <li className="page-item disabled"><a className="page-link" href="#">3</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">4</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">5</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">6</a></li>
+                                    <li className="page-item disabled"><a className="page-link text-danger" href="#">1</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">2</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">3</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">4</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">5</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">6</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -77,7 +77,7 @@ function Home() {
                 </div>
 
                 <hr></hr>
-
+                <h3>Mais vendidos</h3>
                 <div className="row g-3">
                     <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
                         <div className="card text-center bg-light" >
@@ -193,119 +193,6 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div className="card text-center bg-light" >
-                            <a href="" className="position-absolute p-2 text-danger">
-                                <i className="bi-suit-heart" style={fontStyle}>
-                                </i>
-                            </a>
-
-                            <img src={bolsa} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 249,90
-                            </div>
-                            <div className="card-body">
-                                <h5 className="card-title">Bolsa Style</h5>
-                                <p className="card-text truncar-3l"></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div className="card text-center bg-light" >
-                            <a href="" className="position-absolute p-2 text-danger">
-                                <i className="bi-suit-heart" style={fontStyle}>
-                                </i>
-                            </a>
-
-                            <img src={marwan} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 149,90
-                            </div>
-                            <div className="card-body">
-                                <h5 className="card-title">Camisa Marwan</h5>
-                                <p className="card-text truncar-3l"></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div className="card text-center bg-light" >
-                            <a href="" className="position-absolute p-2 text-danger">
-                                <i className="bi-suit-heart" style={fontStyle}>
-                                </i>
-                            </a>
-
-                            <img src={nagakawa} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 249,90
-                            </div>
-                            <div className="card-body">
-                                <h5 className="card-title">Casaco Nagakawa</h5>
-                                <p className="card-text truncar-3l"></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div className="card text-center bg-light" >
-                            <a href="" className="position-absolute p-2 text-danger">
-                                <i className="bi-suit-heart-fill" style={fontStyle}>
-                                </i>
-                            </a>
-
-                            <img src={urban} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 249,90
-                            </div>
-                            <div className="card-body">
-                                <h5 className="card-title">Casaco Urban</h5>
-                                <p className="card-text truncar-3l"></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div className="card text-center bg-light" >
-                            <a href="" className="position-absolute p-2 text-danger">
-                                <i className="bi-suit-heart" style={fontStyle}>
-                                </i>
-                            </a>
-
-                            <img src={tshirt} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 149,90
-                            </div>
-                            <div className="card-body">
-                                <h5 className="card-title">Camisa Basic Preta</h5>
-                                <p className="card-text truncar-3l"></p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-                        <div className="card text-center bg-light" >
-                            <a href="" className="position-absolute p-2 text-danger">
-                                <i className="bi-suit-heart" style={fontStyle}>
-                                </i>
-                            </a>
-
-                            <img src={nagakawa} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 149,90
-                            </div>
-                            <div className="card-body">
-                                <h5 className="card-title">Casaco Nagakawa</h5>
-                                <p className="card-text truncar-3l"></p>
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <hr></hr>
@@ -322,12 +209,12 @@ function Home() {
                             </form>
                             <nav className="d-inline-block me-3 mr-3">
                                 <ul className="pagination pagination-sm my-0">
-                                    <li className="page-item"><a className="page-link" href="#">1</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">2</a></li>
-                                    <li className="page-item disabled"><a className="page-link" href="#">3</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">4</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">5</a></li>
-                                    <li className="page-item"><a className="page-link" href="#">6</a></li>
+                                    <li className="page-item disabled"><a className="page-link text-danger" href="#">1</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">2</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">3</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">4</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">5</a></li>
+                                    <li className="page-item"><a className="page-link text-danger" href="#">6</a></li>
                                 </ul>
                             </nav>
                         </div>
