@@ -1,5 +1,6 @@
 import React from "react";
-import './Main.css'
+
+import './componentes/Main.css'
 import banner from './assets/home/banner-cortado.jpg';
 import bolsa from './assets/home/bolsa_style.jpg';
 import marwan from './assets/home/Camisa Marwan.jpg';
