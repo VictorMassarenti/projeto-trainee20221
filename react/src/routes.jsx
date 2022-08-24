@@ -14,7 +14,7 @@ export default function AppRouter () {
         <Router>
             <Navbar />
             <Routes>
-                <Route path='/' element={<Home />} />
+                <Route exact path='/' element={<Home />} />
                 <Route path='/collection' element={<Collection />} />
                 <Route path='/aboutus' element={<Aboutus />} />
                 <Route path='/logincadastro' element={<Cadastro />} />
