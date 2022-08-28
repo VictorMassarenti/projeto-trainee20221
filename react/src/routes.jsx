@@ -7,6 +7,7 @@ import Footer from "./componentes/Footer"
 import Cadastro from "./componentes/Cadastro"
 import Login from "./componentes/Login"
 import Collection from "./Collection"
+import Admin from "./Admin"
 
 
 export default function AppRouter () {
@@ -19,6 +20,7 @@ export default function AppRouter () {
                 <Route path='/aboutus' element={<Aboutus />} />
                 <Route path='/logincadastro' element={<Cadastro />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/admin' element={<Admin />} />
             </Routes>
             <Footer />
         </Router>
