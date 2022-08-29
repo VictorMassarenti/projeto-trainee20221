@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 /* import { useHistory } from 'react-router-dom' */
-import './Cadastro.css'
+import './Signup.css'
 import validacaoLogin from "./validacaoLogin";
 
 export default function Login() {

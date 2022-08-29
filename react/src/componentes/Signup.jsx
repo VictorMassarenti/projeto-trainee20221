@@ -1,13 +1,13 @@
 import React , { useState } from "react";
 import { Link } from "react-router-dom";
-import './Cadastro.css'
+import './Signup.css'
 
 export default function Cadastro() {
 
     const [email, setEmail] = useState("");
     const [pass, setPassword] = useState("");
 
-    async function handleLogin(e) {
+    async function handleSignup(e) {
         e.preventDefault();
 
         console.log(email, pass)
@@ -21,7 +21,7 @@ export default function Cadastro() {
                             <div className="caixa_login">
                                 <span className="material-icons text-danger" style={{ fontSize: 42 }}>how_to_reg</span><h2> Faça seu cadastro </h2>
                                 <p><small>Digite suas informações para cadastro</small></p>
-                                <form className='login' onSubmit={handleLogin}>
+                                <form className='login' onSubmit={handleSignup}>
                                     <div className="input-group mb-3 pt-3">
                                         <span className="input-group-text bg-bege material-icons text-danger pt-2 border-black " id="basicaddon1">email</span>
                                         <input className="form-control bg-bege input_login border-black" placeholder="Cadastre seu e-mail" value={email}
