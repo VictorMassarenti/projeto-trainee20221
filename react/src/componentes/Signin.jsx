@@ -1,73 +1,75 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-/* import { useHistory } from 'react-router-dom' */
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "./auth/useAuth";
+
 import './Signup.css'
-import validacaoLogin from "./validacaoLogin";
 
-export default function Login() {
+
+const Signin = () => {
+    const { signin } = useAuth();
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
-    const [pass, setPassword] = useState("");
+    const [senha, setSenha] = useState("");
+    const [error, setError] = useState("");
 
-    /* const history = useHistory(); */
+    const handleLogin = () => {
+        if (!email | !senha) {
+            setError("Preencha todos os campos");
+            return;
+        }
+        const res = signin(email, senha);
 
-    async function handleLogin(e) {
-        e.preventDefault();
-
-        const data = {
-            email,
-            pass
+        if (res) {
+            setError(res);
+            return;
         }
 
-        if (email == "admin" && pass == "admin") {
-            console.log('funcionando') /* window.location = "/Admin"; */
+        if (email == "admin" && senha == "admin") {
+            navigate("/admin");
+        } else {
+            navigate("/");
         }
-        else { alert("Dados incorretos, tente novamente"); }
 
-        /*  try {
-             const response = await api.get('/login', { data })
- 
-             localStorage.setItem('id', response.data.user.id)
-             localStorage.setItem('nome', response.data.user.nome)
- 
-             alert(response.data.user);
-             history.push('/calendario')
-         } catch (err) {
-             alert("nope");
-         } */
-    }
+
+    };
 
     return (
         <div className="background_login">
             <main className="flex-fill">
                 <div className="container text-center">
                     <div className="row justify-content-center">
-                        <div className="caixa_login">
+                        <div className="caixa_login row justify-content-center">
                             <span className="material-icons text-danger" style={{ fontSize: 42 }}>login</span><h2> Faça seu Login </h2>
                             <p><small>Digite suas informações para login</small></p>
                             <form className='login' onSubmit={handleLogin}>
                                 <div className="input-group mb-3 pt-3">
                                     <span className="input-group-text bg-bege material-icons text-danger pt-2 border-black " id="basicaddon1">email</span>
-                                    <input className="form-control bg-bege input_login border-black" placeholder="Digite seu e-mail" value={email}
-                                        onChange={e => setEmail(e.target.value)} />
+                                    <input className="form-control bg-bege input_login border-black" type="email" placeholder="Digite seu e-mail" value={email}
+                                        onChange={(e) => [setEmail(e.target.value), setError("")]} />
 
                                 </div>
 
                                 <div className="input-group mb-3 pt-4">
                                     <span className="input-group-text bg-bege material-icons text-danger pt-2 border-black" id="basicaddon1">key</span>
-                                    <input type="password" className="form-control bg-bege input_login border-black" placeholder="Digite sua senha"
-                                        value={pass} onChange={e => setPassword(e.target.value)} />
+                                    <input className="form-control bg-bege input_login border-black" type="password" placeholder="Digite sua senha"
+                                        value={senha} onChange={(e) => [setSenha(e.target.value), setError("")]} />
 
                                 </div>
 
+                                <div>
+                                    {error}
+                                </div>
+
                                 <div className="pt-3">
-                                    <button type="submit" className="btn btn-danger rounded-5">
+                                    <button className="btn btn-danger rounded-5" type="button" onClick={handleLogin}>
                                         <span style={{ margin: 20 }}>Login</span>
                                     </button>
                                 </div>
                             </form>
 
                             <div className="pt-3">
-                                <p><small>Não possui conta? <Link to="/logincadastro" className="text-danger"><b>Cadastre-se!</b></Link></small></p>
+                                <p><small>Não possui conta? <Link to="/signup" className="text-danger"><b>Cadastre-se!</b></Link></small></p>
                             </div>
                         </div>
 
@@ -78,3 +80,5 @@ export default function Login() {
         </div>
     )
 }
+
+export default Signin;

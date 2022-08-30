@@ -13,16 +13,16 @@ function Footer() {
                         CNPJ 99.999.999/0001-99
                     </div>
                     <div className="col-12 col-md-4 text-center">
-                        <a href="/privacidade.html" className="text-decoration-none text-dark">Política de Privacidade</a><br />
-                        <a href="/termos.html" className="text-decoration-none text-dark">Termos de Uso</a><br />
-                        <a href="/quemsomos.html" className="text-decoration-none text-dark">Quem Somos</a><br />
-                        <a href="/trocas.html" className="text-decoration-none text-dark">Trocas e Devoluções</a>
+                        <a href="#" className="text-decoration-none text-dark">Política de Privacidade</a><br />
+                        <a href="#" className="text-decoration-none text-dark">Termos de Uso</a><br />
+                        <a href="#" className="text-decoration-none text-dark">Quem Somos</a><br />
+                        <a href="#" className="text-decoration-none text-dark">Trocas e Devoluções</a>
                     </div>
 
                     <div className="col-12 col-md-4 text-center">
-                        <a href="/contato" className="text-decoration-none text-dark">Contato pelo Site</a><br />
-                        Email: <a href="mailto:email@dominio.com" className="text-decoration-none text-dark">email@dominio.com</a><br />
-                        <a href="phone:71999998302" className="text-decoration-none text-dark">(71) 9 9999-9999</a><br />
+                        <a href="#" className="text-decoration-none text-dark">Contato pelo Site</a><br />
+                        Email: <a href="#" className="text-decoration-none text-dark">email@dominio.com</a><br />
+                        <a href="#" className="text-decoration-none text-dark">(71) 9 9999-9999</a><br />
                     </div>
                 </div>
             </div>

@@ -31,19 +31,19 @@ function Navbar() {
                         </div>
 
                         <div className="col-12 col-md-2 text-center text-md-end pt-4">
-                            <Link to="/login" className="text-decoration-none text-dark">
+                            <Link to="/signin" className="text-decoration-none text-dark">
                                 <span className="material-icons text-cinza" style={fontSizeIcon}>
                                     person
                                 </span>
                             </Link>
 
-                            <a href="dark.html" className="text-decoration-none text-dark">
+                            <a href="#" className="text-decoration-none text-dark">
                                 <span className="material-icons text-cinza" style={fontSizeIcon}>
                                     shopping_cart
                                 </span>
                             </a>
 
-                            <a href="/carrinho.html" className="text-black">
+                            <a href="#" className="text-black">
                                 <span className="material-icons text-cinza text-md-center" style={fontSizeIcon}>
                                     dark_mode
                                 </span>
