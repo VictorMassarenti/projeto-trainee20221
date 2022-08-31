@@ -14,6 +14,7 @@ const Signin = () => {
     const [error, setError] = useState("");
 
     const handleLogin = () => {
+
         if (!email | !senha) {
             setError("Preencha todos os campos");
             return;
@@ -25,14 +26,14 @@ const Signin = () => {
             return;
         }
 
-        if (email == "admin" && senha == "admin") {
+        if (email == "admin@User" && senha == "adminPassword") {
             navigate("/admin");
         } else {
             navigate("/");
         }
-
-
     };
+
+
 
     return (
         <div className="background_login">
@@ -62,7 +63,7 @@ const Signin = () => {
                                 </div>
 
                                 <div className="pt-3">
-                                    <button className="btn btn-danger rounded-5" type="button" onClick={handleLogin}>
+                                    <button className="btn btn-danger rounded-5" type="submit">
                                         <span style={{ margin: 20 }}>Login</span>
                                     </button>
                                 </div>

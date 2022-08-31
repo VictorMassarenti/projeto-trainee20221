@@ -9,7 +9,7 @@ export default function AvisoAdmin() {
     };
 
     return (
-        <div style={avisoStyle} hidden>
+        <div style={avisoStyle} hidden={true}>
             <h3 className="text-center">Avisos</h3>
 
             <table className="table table-striped mt-2">

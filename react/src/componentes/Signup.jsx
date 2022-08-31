@@ -29,7 +29,7 @@ const Signup = () => {
         }
 
         alert("Usuário cadatrado com sucesso!");
-        navigate("/");
+        navigate("/signin");
     };
 
     return (
@@ -40,7 +40,7 @@ const Signup = () => {
                         <div className="caixa_login">
                             <span className="material-icons text-danger" style={{ fontSize: 42 }}>how_to_reg</span><h2> Faça seu cadastro </h2>
                             <p><small>Digite suas informações para cadastro</small></p>
-                            <form className='login'>
+                            <form className='login' onSubmit={handleSignup}>
                                 <div className="input-group mb-3 pt-3">
                                     <span className="input-group-text bg-bege material-icons text-danger pt-2 border-black " id="basicaddon1">email</span>
                                     <input className="form-control bg-bege input_login border-black" type="email" placeholder="Cadastre seu e-mail" value={email}
@@ -65,7 +65,7 @@ const Signup = () => {
                                 <div>{error}</div>
 
                                 <div className="pt-3">
-                                    <button className="btn btn-danger rounded-5" type="button" onClick={handleSignup}>
+                                    <button className="btn btn-danger rounded-5" type="submit" >
                                         <span style={{ margin: 20 }}>Cadastre-se</span>
                                     </button>
                                 </div>

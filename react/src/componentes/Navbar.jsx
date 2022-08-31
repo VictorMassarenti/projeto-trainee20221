@@ -1,5 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "./auth/useAuth";
+
 
 import logo from '../assets/nav-logo/logo.png'
 import './Main.css'
@@ -16,6 +18,26 @@ function Navbar() {
         padding: '6px'
     }
 
+    const buttonLogout = {
+        backgroundColor: '#E3DDD7',
+        color: '#353535'
+    }
+
+    const { signout } = useAuth();
+    const navigate = useNavigate();
+    const usersStorage = JSON.parse(localStorage.getItem("user_token"))
+    const [hidden, setHidden] = useState(true)
+    useEffect(() => {
+        if (usersStorage === null) {
+            setHidden(true)
+        } else if (usersStorage != null) {
+            if (usersStorage.token === 'admin') {
+                setHidden(false)
+            } else {
+                setHidden(true)
+            }
+        }
+    })
     return (
         <header>
             <nav className="bg-bege border-bottom shadow">
@@ -28,6 +50,9 @@ function Navbar() {
                             <Link to="/" className="text-decoration-none text-dark px-2"><b>Home</b></Link>
                             <Link to="/collection" className="text-decoration-none text-dark px-2"><b>Collection</b></Link>
                             <Link to="/aboutus" className="text-decoration-none text-dark px-2"><b>About Us</b></Link>
+                            <br />
+                            <Link to="/admin" className="text-decoration-none text-dark px-2" hidden={hidden}><b>Administrador</b></Link>
+                            <button className="material-icons" style={buttonLogout} onClick={() => [signout(), navigate("/signin")]}>logout</button>
                         </div>
 
                         <div className="col-12 col-md-2 text-center text-md-end pt-4">

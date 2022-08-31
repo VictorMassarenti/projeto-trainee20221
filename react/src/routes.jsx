@@ -18,17 +18,18 @@ const Private = ({ Item }) => {
 };
 
 export default function AppRouter() {
+   
     return (
         <Router>
             <Fragment>
                 <Navbar />
                 <Routes>
-                    <Route exact path='/' element={<Private Item={Home} />} />
+                    <Route exact path='/' element={<Home />} />
                     <Route path='/collection' element={<Collection />} />
                     <Route path='/aboutus' element={<Aboutus />} />
                     <Route path='/signup' element={<Signup />} />
                     <Route path='/signin' element={<Signin />} />
-                    <Route path='/admin' element={<Admin />} />
+                    <Route path='/admin' element={<Private Item={Admin} />} />
                 </Routes>
             </Fragment>
             <Footer />
