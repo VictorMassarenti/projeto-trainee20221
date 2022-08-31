@@ -25,16 +25,21 @@ function Navbar() {
 
     const { signout } = useAuth();
     const navigate = useNavigate();
-    const usersStorage = JSON.parse(localStorage.getItem("user_token"))
-    const [hidden, setHidden] = useState(true)
+    const usersStorage = JSON.parse(localStorage.getItem("user_token"));
+    const [hidden, setHidden] = useState(true);
+    const [hiddenLogout, setHiddenLogout] = useState(true);
+
     useEffect(() => {
         if (usersStorage === null) {
             setHidden(true)
+            setHiddenLogout(true)
         } else if (usersStorage != null) {
             if (usersStorage.token === 'admin') {
                 setHidden(false)
+                setHiddenLogout(false)
             } else {
                 setHidden(true)
+                setHiddenLogout(false)
             }
         }
     })
@@ -52,7 +57,7 @@ function Navbar() {
                             <Link to="/aboutus" className="text-decoration-none text-dark px-2"><b>About Us</b></Link>
                             <br />
                             <Link to="/admin" className="text-decoration-none text-dark px-2" hidden={hidden}><b>Administrador</b></Link>
-                            <button className="material-icons" style={buttonLogout} onClick={() => [signout(), navigate("/signin")]}>logout</button>
+                            <button className="material-icons" style={buttonLogout} hidden={hiddenLogout} onClick={() => [signout(), navigate("/signin")]}>logout</button>
                         </div>
 
                         <div className="col-12 col-md-2 text-center text-md-end pt-4">
