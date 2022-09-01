@@ -21,9 +21,6 @@ function Navbar() {
     const buttonLogout = {
         backgroundColor: '#E3DDD7',
         color: '#353535',
-        paddingLeft: 3,
-        paddingRight: 3,
-        justifyContent: 'center',
     }
 
     const { signout } = useAuth();
