@@ -9,7 +9,7 @@ export default function Admin() {
       <div className="container">
 
 
-        <h1 className="text-center mt-3 mb-5">Administrador</h1>
+        <h1 className="text-center mt-3 mb-5">Gerenciador de Produtos</h1>
 
         <AvisoAdmin />
 
