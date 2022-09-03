@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import api from './componentes/api/api'
 
 import './componentes/Main.css'
 import banner from './assets/home/banner-cortado.jpg';
@@ -8,11 +9,26 @@ import nagakawa from './assets/home/casaco_nagakawa.jpg';
 import tshirt from './assets/home/tshirt_black_cortado.jpg';
 import urban from './assets/home/casaco_urban_cortado.jpg';
 
+
 function Home() {
     const fontStyle = {
         fontSize: '24px',
         lineHeight: '24px'
     }
+
+    const [teste, setTeste] = useState('')
+
+    useEffect(() => {
+        api
+            .get("/profile")
+            .then((response) => setTeste(JSON.stringify(response.data.name)))
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            });
+    }, []);
+
+    console.log(teste)
+    
     return (
         <main className="flex-fill">
             <div className="container">
