@@ -10,7 +10,7 @@ import tshirt from './assets/home/tshirt_black_cortado.jpg';
 import urban from './assets/home/casaco_urban_cortado.jpg';
 
 
-function Home() {
+export default function Home() {
     const fontStyle = {
         fontSize: '24px',
         lineHeight: '24px'
@@ -242,5 +242,3 @@ function Home() {
 
     )
 }
-
-export default Home

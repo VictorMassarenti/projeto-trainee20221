@@ -5,7 +5,7 @@ import useAuth from "./auth/useAuth";
 import './Signup.css'
 
 
-const Signin = () => {
+export default function Signin() {
     const { signin } = useAuth();
     const navigate = useNavigate();
 
@@ -13,8 +13,7 @@ const Signin = () => {
     const [senha, setSenha] = useState("");
     const [error, setError] = useState("");
 
-    const handleLogin = () => {
-
+    function handleLogin() {
         if (!email | !senha) {
             setError("Preencha todos os campos");
             return;
@@ -43,7 +42,7 @@ const Signin = () => {
                         <div className="caixa_login row justify-content-center">
                             <span className="material-icons text-danger" style={{ fontSize: 42 }}>login</span><h2> Faça seu Login </h2>
                             <p><small>Digite suas informações para login</small></p>
-                            <form className='login' onSubmit={handleLogin}>
+                            <form className='login' >
                                 <div className="input-group mb-3 pt-3">
                                     <span className="input-group-text bg-bege material-icons text-danger pt-2 border-black " id="basicaddon1">email</span>
                                     <input className="form-control bg-bege input_login border-black" type="email" placeholder="Digite seu e-mail" value={email}
@@ -63,7 +62,7 @@ const Signin = () => {
                                 </div>
 
                                 <div className="pt-3">
-                                    <button className="btn btn-danger rounded-5" type="submit">
+                                    <button className="btn btn-danger rounded-5" type="button" onClick={handleLogin}>
                                         <span style={{ margin: 20 }}>Login</span>
                                     </button>
                                 </div>
@@ -81,5 +80,3 @@ const Signin = () => {
         </div>
     )
 }
-
-export default Signin;

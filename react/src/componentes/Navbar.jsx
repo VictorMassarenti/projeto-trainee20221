@@ -6,7 +6,7 @@ import useAuth from "./auth/useAuth";
 import logo from '../assets/nav-logo/logo.png'
 import './Main.css'
 
-function Navbar() {
+export default function Navbar() {
     const imgStyle = {
         width: '90px'
     };
@@ -86,5 +86,3 @@ function Navbar() {
         </header>
     )
 }
-
-export default Navbar

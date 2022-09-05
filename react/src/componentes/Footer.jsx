@@ -1,7 +1,7 @@
 import React from "react";
 import './Main.css'
 
-function Footer() {
+export default function Footer() {
     return (
         <footer className="border-top text-muted bg-light">
 
@@ -29,5 +29,3 @@ function Footer() {
         </footer>
     )
 }
-
-export default Footer

@@ -1,7 +1,7 @@
 import React from "react";
 import aboutus from './assets/about/aboutus-cortado.jpg'
 
-function Aboutus() {
+export default function Aboutus() {
     return (
         <main className="flex-fill">
             <div className="container">
@@ -25,5 +25,3 @@ function Aboutus() {
         </main>
     )
 }
-
-export default Aboutus
