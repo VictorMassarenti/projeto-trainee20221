@@ -1,11 +1,10 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import api from "../api/api";
 
 export default function CriarProdutoAdmin() {
     const [name, setName] = useState('');
-    const [estoque, setEstoque] = useState('');
-    const [preco, setPreco] = useState('');
+    const [inventory, setInventory] = useState('');
+    const [price, setPrice] = useState('');
     const [id, setId] = useState(0);
 
     useEffect(() => {
@@ -17,13 +16,9 @@ export default function CriarProdutoAdmin() {
         api
             .post("/produtos", {
                 name,
-                estoque,
-                preco,
+                inventory,
+                price,
                 id,
-            })
-            .then((response) => console.log(response))
-            .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
             });
 
         Array.from(document.querySelectorAll("input")).forEach(
@@ -38,7 +33,7 @@ export default function CriarProdutoAdmin() {
             </h3>
             <form>
                 <div className="mb-3">
-                    <label for="criar-produto-nome" className="form-label">Nome</label>
+                    <label className="form-label">Nome</label>
                     <input
                         type="text"
                         className="form-control w-50"
@@ -48,22 +43,22 @@ export default function CriarProdutoAdmin() {
                     />
                 </div>
                 <div className="mb-3">
-                    <label for="criar-produto-preço" className="form-label">Preço &#40;R$&#41;</label>
+                    <label className="form-label">Preço &#40;R$&#41;</label>
                     <input
                         type="number"
                         step="any"
                         className="form-control w-50"
                         id="criar-produto-preço"
-                        onChange={(e) => setEstoque(e.target.value)}
+                        onChange={(e) => setInventory(e.target.value)}
                     />
                 </div>
                 <div className="mb-3">
-                    <label for="criar-produto-estoque" className="form-label">Estoque</label>
+                    <label className="form-label">Estoque</label>
                     <input
                         type="number"
                         className="form-control w-50"
                         id="criar-produto-estoque"
-                        onChange={(e) => setPreco(e.target.value)}
+                        onChange={(e) => setPrice(e.target.value)}
                     />
                 </div>
                 {/* <div className="mb-3">

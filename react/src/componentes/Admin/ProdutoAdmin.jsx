@@ -1,28 +1,58 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import api from "../api/api";
+
 
 export default function ProdutoAdmin() {
+
+    const [APIData, setAPIData] = useState([]);
+
+    useEffect(() => {
+        api
+            .get("/produtos")
+            .then((response) => setAPIData(response.data))
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            });
+
+    }, [])
+
+    function onDelete(id) {
+        api
+            .delete(`/produtos/${id}`)
+            .then(() => {
+                getData();
+            })
+    }
+
+    function getData() {
+        api
+            .get("/produtos")
+            .then((getData) => {
+                setAPIData(getData.data);
+            })
+    }
     return (
-        <tr>
-            <th scope="row">#01219</th>
-            <td>Camisa Marwan</td>
-            <td>
-                <div className="d-flex">
-                    <button className="btn btn-light text-danger">
-                        -
-                    </button>
-                    <div className="pt-1 ps-3 pe-3">
-                        <input type="text" className="form-control quantidade_estoque" placeholder="" value="100" />
+        < tbody className="table-group-divider" >
+            {
+                APIData.map((data) => {
+                    return (
 
-                    </div>
-                    <button className="btn btn-light text-primary">
-                        +
-                    </button>
-
-                </div>
-            </td>
-            <td>
-                <input type="text" className="form-control quantidade_estoque" placeholder="" value="100" />
-            </td>
-        </tr>
+                        <tr scope="row">
+                            <th >{data.id}</th>
+                            <th >{data.name}</th>
+                            <th >{data.inventory}</th>
+                            <th >{data.price}</th>
+                            <th >
+                                <button
+                                    className="material-icons btn btn-danger"
+                                    onClick={() => onDelete(data.id)}>
+                                    delete_forever
+                                </button>
+                            </th>
+                        </tr>
+                    )
+                })
+            }
+        </tbody >
     )
 }

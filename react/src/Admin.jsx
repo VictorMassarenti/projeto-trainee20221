@@ -52,12 +52,7 @@ export default function Admin() {
               <th scope="col">Preço &#40;R$&#41;</th>
             </tr>
           </thead>
-          <tbody className="table-group-divider">
             <ProdutoAdmin />
-            <ProdutoAdmin />
-            <ProdutoAdmin />
-            <ProdutoAdmin />
-          </tbody>
         </table>
         <CriarProdutoAdmin />
       </div>

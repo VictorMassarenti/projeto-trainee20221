@@ -33,7 +33,7 @@ export default function AvisoAdmin() {
                             </div>
                         </td>
                         <td>
-                            <input type="text" className="form-control quantidade_estoque" placeholder="" value="100"/>
+                            
                         </td>
                     </tr>
                 </tbody>

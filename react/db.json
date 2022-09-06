@@ -1,10 +1,10 @@
 {
   "produtos": [
     {
-      "name": "teste",
-      "estoque": "22",
-      "preco": "5",
-      "id": "420890"
+      "name": "Camisa Marwan",
+      "inventory": "100",
+      "price": "30",
+      "id": "277760"
     }
   ],
   "comments": [
