@@ -1,9 +1,10 @@
 {
-  "posts": [
+  "produtos": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "teste",
+      "estoque": "22",
+      "preco": "5",
+      "id": "420890"
     }
   ],
   "comments": [

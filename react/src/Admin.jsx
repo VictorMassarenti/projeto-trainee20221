@@ -13,8 +13,6 @@ export default function Admin() {
 
         <AvisoAdmin />
 
-        <h3 className="mb-3">Tabela de Produtos</h3>
-
         <hr></hr>
 
         <div className="row">

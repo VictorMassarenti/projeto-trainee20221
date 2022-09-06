@@ -16,7 +16,7 @@ export default function Home() {
         lineHeight: '24px'
     }
 
-    const [teste, setTeste] = useState('')
+    /* const [teste, setTeste] = useState('')
 
     useEffect(() => {
         api
@@ -27,7 +27,7 @@ export default function Home() {
             });
     }, []);
 
-    console.log(teste)
+    console.log(teste) */
     
     return (
         <main className="flex-fill">
