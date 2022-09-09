@@ -2,13 +2,13 @@
   "produtos": [
     {
       "name": "Produto Teste",
-      "inventory": "155",
+      "inventory": "10",
       "price": "22",
       "id": "355358"
     },
     {
       "name": "Produto2 Teste",
-      "inventory": "1310",
+      "inventory": "10",
       "price": "1",
       "id": "882638"
     }

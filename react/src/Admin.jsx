@@ -1,17 +1,15 @@
 import React from "react";
-import AvisoAdmin from "./componentes/Admin/AvisoAdmin";
 import CriarProdutoAdmin from "./componentes/Admin/CriarProdutoAdmin";
 import ProdutoAdmin from "./componentes/Admin/ProdutoAdmin";
 
 export default function Admin() {
+
   return (
     <main className="flex-fill">
       <div className="container">
 
 
         <h1 className="text-center mt-3 mb-5">Gerenciador de Produtos</h1>
-
-        <AvisoAdmin />
 
         <hr></hr>
 
@@ -49,6 +47,7 @@ export default function Admin() {
               <th scope="col">ID</th>
               <th scope="col">Produto</th>
               <th scope="col">Estoque</th>
+              <th scope="col"></th>
               <th scope="col">Preço &#40;R$&#41;</th>
             </tr>
           </thead>
