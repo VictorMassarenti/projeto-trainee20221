@@ -26,22 +26,22 @@ export default function Navbar() {
     const { signout } = useAuth();
     const navigate = useNavigate();
     const usersStorage = JSON.parse(localStorage.getItem("user_token"));
-    const [hidden, setHidden] = useState(true);
+    const [hiddenAdmin, setHiddenAdmin] = useState(true);
     const [hiddenLogout, setHiddenLogout] = useState(true);
     const [hiddenWelcome, setHiddenWelcome] = useState(true)
 
     useEffect(() => {
         if (usersStorage === null) {
-            setHidden(true)
+            setHiddenAdmin(true)
             setHiddenLogout(true)
             setHiddenWelcome(true)
         } else if (usersStorage != null) {
             if (usersStorage.token === 'admin') {
-                setHidden(false)
+                setHiddenAdmin(false)
                 setHiddenLogout(false)
                 setHiddenWelcome(true)
             } else {
-                setHidden(true)
+                setHiddenAdmin(true)
                 setHiddenLogout(false)
                 setHiddenWelcome(false)
             }
@@ -60,7 +60,7 @@ export default function Navbar() {
                             <Link to="/collection" className="text-decoration-none text-dark px-2"><b>Collection</b></Link>
                             <Link to="/aboutus" className="text-decoration-none text-dark px-2"><b>About us</b></Link>
                             <br />
-                            <Link to="/admin" className="text-decoration-none text-dark px-2" hidden={hidden}><b>Administrador</b></Link>
+                            <Link to="/admin" className="text-decoration-none text-dark px-2" hidden={hiddenAdmin}><b>Administrador</b></Link>
                             <b className="text-decoration-none text-dark px-2" hidden={hiddenWelcome}>Olá, seja bem vindo! </b>
                             <button
                                 className="material-icons"
