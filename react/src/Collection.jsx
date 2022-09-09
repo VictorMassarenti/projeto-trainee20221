@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
+import ButtonBuy from "./componentes/ButtonBuy";
+import api from "./componentes/api/api";
 
 
 import './componentes/Main.css'
@@ -13,6 +15,19 @@ export default function Collection() {
         fontSize: '24px',
         lineHeight: '24px'
     }
+
+    const [APIData, setAPIData] = useState([]);
+
+    useEffect(() => {
+        api
+            .get("/produtos")
+            .then((response) => setAPIData(response.data))
+            .catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            });
+
+    }, [])
+
     return (
 
         <main className="flex-fill">
@@ -26,8 +41,11 @@ export default function Collection() {
                             </a>
 
                             <img src={marwan} className="card-img-top" alt="" />
-                            <div className="card-header">
-                                R$ 249,90
+                            <div className="card-header d-flex text-center">
+                                <div className="mx-auto" >
+                                    R$149,00
+                                </div>
+                                <ButtonBuy />
                             </div>
                             <div className="card-body">
                                 <h5 className="card-title">Camisa Seirafi</h5>
