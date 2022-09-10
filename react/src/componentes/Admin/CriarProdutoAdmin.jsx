@@ -43,7 +43,7 @@ export default function CriarProdutoAdmin() {
                     />
                 </div>
                 <div className="mb-3">
-                    <label className="form-label">Preço &#40;R$&#41;</label>
+                    <label className="form-label">Estoque</label>
                     <input
                         type="number"
                         step="any"
@@ -53,7 +53,7 @@ export default function CriarProdutoAdmin() {
                     />
                 </div>
                 <div className="mb-3">
-                    <label className="form-label">Estoque</label>
+                    <label className="form-label">Preço &#40;R$&#41;</label>
                     <input
                         type="number"
                         className="form-control w-50"

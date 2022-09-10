@@ -11,6 +11,12 @@
       "inventory": "30",
       "price": "1",
       "id": "882638"
+    },
+    {
+      "name": "Teste ok",
+      "inventory": "1",
+      "price": "100",
+      "id": "437297"
     }
   ],
   "comments": [
