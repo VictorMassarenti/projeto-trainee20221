@@ -26,6 +26,8 @@ export default function CriarProdutoAdmin() {
         );
     }
 
+    console.log(price)
+
     return (
         <>
             <h3 className="mt-3 mb-3">
@@ -58,7 +60,7 @@ export default function CriarProdutoAdmin() {
                         type="number"
                         className="form-control w-50"
                         id="criar-produto-estoque"
-                        onChange={(e) => setPrice(e.target.value)}
+                        onChange={(e) => setPrice(e.target.value * 100)}
                     />
                 </div>
                 {/* <div className="mb-3">

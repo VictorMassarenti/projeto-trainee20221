@@ -38,15 +38,15 @@ export default function ProdutoAdmin() {
                     return (
 
                         <tr scope="row">
-                            <th >{data.id}</th>
-                            <th >{data.name}</th>
+                            <th>{data.id}</th>
+                            <th>{data.name}</th>
                             <th>{data.inventory}</th>
                             <th ><span className="d-flex">
                                     <div className="btn btn-danger rounded-2" hidden={(data.inventory > 10)}>
                                         <small>BAIXO ESTOQUE</small>
                                     </div>
                                 </span></th>
-                            <th >{data.price}</th>
+                            <th >{data.price / 100}</th>
                             <th >
                                 <button
                                     className="material-icons btn btn-danger"
