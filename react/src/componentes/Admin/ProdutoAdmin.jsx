@@ -42,7 +42,7 @@ export default function ProdutoAdmin() {
                             <th >{data.name}</th>
                             <th>{data.inventory}</th>
                             <th ><span className="d-flex">
-                                    <div className="btn btn-danger rounded-2" hidden={(data.inventory > 20)}>
+                                    <div className="btn btn-danger rounded-2" hidden={(data.inventory > 10)}>
                                         <small>BAIXO ESTOQUE</small>
                                     </div>
                                 </span></th>
