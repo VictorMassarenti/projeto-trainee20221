@@ -1,16 +1,22 @@
 {
   "produtos": [
     {
-      "name": "Teste 4",
-      "inventory": "10",
-      "price": 13990,
-      "id": "366967"
+      "name": "Teste1",
+      "inventory": "11",
+      "price": 39990,
+      "id": "854790"
     },
     {
-      "name": "Teste 1",
+      "name": "Teste 2",
       "inventory": "11",
-      "price": 49999,
-      "id": "189609"
+      "price": 39935,
+      "id": "467080"
+    },
+    {
+      "name": "Teste3",
+      "inventory": "11",
+      "price": 39995,
+      "id": "963437"
     }
   ],
   "comments": [

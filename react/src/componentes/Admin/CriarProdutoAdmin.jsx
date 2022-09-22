@@ -26,8 +26,6 @@ export default function CriarProdutoAdmin() {
         );
     }
 
-    console.log(price)
-
     return (
         <>
             <h3 className="mt-3 mb-3">

@@ -14,7 +14,7 @@ export default function ProdutoAdmin() {
                 console.error("ops! ocorreu um erro" + err);
             });
 
-    }, [])
+    },[APIData])
 
     function onDelete(id) {
         api
