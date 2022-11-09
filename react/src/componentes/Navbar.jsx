@@ -9,10 +9,10 @@ import './Main.css'
 export default function Navbar() {
     const imgStyle = {
         width: '90px'
-    };
+    }
     const fontSize = {
         fontSize: '28px'
-    };
+    }
     const fontSizeIcon = {
         fontSize: '24px',
         padding: '6px'

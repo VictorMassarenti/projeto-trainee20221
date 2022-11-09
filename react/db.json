@@ -17,6 +17,12 @@
       "inventory": "11",
       "price": 39995,
       "id": "963437"
+    },
+    {
+      "name": "teste4",
+      "inventory": "9",
+      "price": 55500,
+      "id": "194777"
     }
   ],
   "comments": [
